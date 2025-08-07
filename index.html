@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildBuddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="container">
+    <h1 class="logo">WildBuddy</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#shop">Shop</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <h2 class="hero-title">🐾 Meet Your New Wild Pals—Before They Disappear!</h2>
+    <p class="hero-subtitle">Play, chat, and learn with cartoon endangered animals who need your help! Can you save them?</p>
+    <a href="#characters" class="btn">🦋 Start the Adventure!</a>
+    <div class="animal-counter">
+      <span id="animalCount">245,654</span> animals saved today!
+    </div>
+  </div>
+</section>
+
+<!-- Characters Selection Section -->
+<section class="section" id="characters">
+  <div class="container">
+    <h2>Choose Your WildBuddy</h2>
+    <p>Pick one of our playful endangered animal friends to start your adventure!</p>
+    <div class="characters-grid">
+
+      <div class="character-card" data-character="Mischievous Axolotl">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Jul%2028,%202025,%2007_08_20%20PM.png" alt="Mischievous Axolotl" />
+        <h3>Mischievous Axolotl</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+      <div class="character-card" data-character="Wise Old Elephant">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Jul%2028,%202025,%2006_54_40%20PM.png" alt="Wise Old Elephant" />
+        <h3>Wise Old Elephant</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+      <div class="character-card" data-character="Stubborn Rhino">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/cde4ec4c-befc-4e54-87d9-2a68b43cedc6.png" alt="Stubborn Rhino" />
+        <h3>Stubborn Rhino</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+      <div class="character-card" data-character="Shy Turtle">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/f8fe2dbd-a27f-4a23-9211-aefa6e682d90.png" alt="Shy Turtle" />
+        <h3>Shy Turtle</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+      <div class="character-card" data-character="Curious Cheetah">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/Chhetah.png" alt="Curious Cheetah" />
+        <h3>Curious Cheetah</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+      <div class="character-card" data-character="Cheerful Penguin">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/a596c768-abba-4960-b5c3-fffbf0e17853.png" alt="Cheerful Penguin" />
+        <h3>Cheerful Penguin</h3>
+        <button class="select-btn">Choose Me!</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <h2>About Us</h2>
+    <p><strong>Welcome to WildBuddy</strong>, where learning about endangered animals is as fun as it is important!</p>
+    <p>Our mission is simple: to inspire curiosity and compassion for the planet’s most vulnerable creatures...</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section" id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-list">
+      <div class="service-item">
+        <h3>Interactive Cartoon Animal Characters</h3>
+        <p>Users engage with playful, animated versions of endangered animals.</p>
+      </div>
+      <div class="service-item">
+        <h3>Edutainment Content</h3>
+        <p>Fun, bite-sized lessons about endangered species.</p>
+      </div>
+      <div class="service-item">
+        <h3>Awareness Through Engagement</h3>
+        <p>Your site isn’t just facts—it’s designed to make users care by building emotional connections with the animals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Chat Screen Overlay -->
+<div id="chatScreen" class="hidden">
+  <div class="phone" role="dialog" aria-modal="true" aria-labelledby="chatProfileName">
+    <div class="chat-header">
+      <img id="chatProfilePic" class="chat-pic" src="" alt="Profile Picture" />
+      <span id="chatProfileName" class="chat-name"></span>
+      <button onclick="closeChat()" class="chat-close" aria-label="Close chat">✖</button>
+    </div>
+    <div id="chatMessages" class="chat-messages" tabindex="0"></div>
+    <div id="chatOptions" class="chat-options"></div>
+  </div>
+</div>
+
+<!-- Shop Section -->
+<section class="section" id="shop">
+  <div class="container">
+    <h2>🌿 WildBuddy Shop</h2>
+    <p>Support wildlife with fun gear! Every purchase helps protect endangered animals.</p>
+    <div class="shop-grid">
+
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43skwjabe/ChatGPT%20Image%20Aug%203,%202025,%2001_57_53%20PM.png" alt="Axolotl Plush" />
+        <h3>Axolotl Plush</h3>
+        <p>Soft, silly, and slightly mischievous!</p>
+        <span class="price">R250.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2006_42_52%20PM.png" alt="Elephant Poster" />
+        <h3>Elephant Wisdom Poster</h3>
+        <p>Daily inspiration from our wise old friend.</p>
+        <span class="price">R120.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2006_48_16%20PM.png" alt="Elephant Poster" />
+        <h3>Stubborn Rhino Hat</h3>
+        <p>Unshakable style from your hard-headed topper!</p>
+        <span class="price">R250.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2007_01_28%20PM.png" alt="Elephant Poster" />
+        <h3>Shy Turtle Shirt</h3>
+        <p>Shy but secretly fabulous.</p>
+        <span class="price">R300.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2007_43_08%20PM.png" alt="Elephant Poster" />
+        <h3>Curious Cheetah Hoodie</h3>
+        <p>Built for speed, powered by ‘what’s over there?!’.</p>
+        <span class="price">R500.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2006_31_43%20PM.PNG" alt="Penguin Mug" />
+        <h3>Penguin Mug</h3>
+        <p>Waddle into your day with a warm drink!</p>
+        <span class="price">R150.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      
+      <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2007_51_46%20PM.png" alt="Penguin Mug" />
+        <h3>WildBuddy's Tracksuit</h3>
+        <p>Move in silence. Protect with purpose.</p>
+        <span class="price">R800.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+      
+       <div class="shop-item">
+        <img src="https://uploads.onecompiler.io/43rucs8em/43rwsavn5/ChatGPT%20Image%20Aug%207,%202025,%2008_01_17%20PM.png" alt="Penguin Mug" />
+        <h3>WildBuddy's Phone case</h3>
+        <p>Protect your phone. Protect their home.</p>
+        <span class="price">R180.00</span>
+        <button class="btn">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 WildBuddy. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
